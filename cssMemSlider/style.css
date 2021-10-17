@@ -110,29 +110,33 @@ input[type="radio"] {
   position: relative;
   top: calc(47vw - 10px);
   left: 85vw;
-  cursor: pointer;
   z-index: 200;
   height: 1.5em;
   width: 1.5em;
-  margin-bottom: 1.5em;
+  padding: 5px;
   margin: 0.5em;
+  margin-bottom: 1.5em;
   border-radius: 50%;
   background-color: #71ABFF;
   border: 1px solid #71ABFF;
   transition: .5s ease-in-out;
+  cursor: pointer;
 }
 
 label {
-  position: relative;
+  position: absolute;
+  top: calc(47vw - 10px);
   left: 85vw;
-  top: calc(84vh - 10px);
+  content: " ";
+  cursor: pointer;
+  padding: 20px 15px;
 }
 
 .slide {
   position: absolute;
   top: 0;
   z-index: 100;
-  height: 90%;
+  height: 50vw;
   width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -176,11 +180,14 @@ input[type="radio"]:before {
   border-radius: 50%;
   background-color: #71ABFF;
   border: 1px solid #71ABFF;
+
 }
 
 input[type="radio"]:after {
-  background-color: #71ABFF;
-  border: 1px solid #71ABFF;
+  /* background-color: #71ABFF;
+  border: 1px solid #71ABFF; */
+  content: "";
+  padding: 10px 30px;
 }
 
 
@@ -233,7 +240,11 @@ input[type="radio"]:hover {
 label {
   position: relative;
   top: 25vh;
+  height: 40px;
+  width: 20px;
   left: 34%;
+  content: "";
+  cursor: pointer;
 }
 
 .slide {
