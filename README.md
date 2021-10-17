@@ -1,0 +1,1 @@
+https://andreikorotki.github.io/cssMemSlider/cssMemSlider/index.html
