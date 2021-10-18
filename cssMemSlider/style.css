@@ -1,0 +1,266 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .common-container {
+    position: relative;
+    padding: 40px;
+    width: 100%;
+    height: 100vh;
+    background-color: #25282A;
+    overflow: hidden;
+  }
+
+  .slider-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    max-width: 1024px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slide1 {
+    background-image: url('./assets/img/slide1.jpg');
+  }
+
+  .slide2 {
+    background-image: url('./assets/img/slide2.jpg');
+  }
+
+  .slide3 {
+    display: block;
+    background-image: url('./assets/img/slide3.jpg');
+  }
+
+  .slide4 {
+    display: block;
+    background-image: url('./assets/img/slide4.jpg');
+  }
+
+  .slide5 {
+    display: block;
+    background-image: url('./assets/img/slide5.jpg');
+  }
+
+.show {
+  display: block;
+}
+
+
+input[type="radio"] {
+appearance: none;
+}
+
+input[type="radio"] {
+  position: relative;
+  top: 67vh;
+  left: calc(100% - 180px);
+  z-index: 200;
+  height: 1.5em;
+  width: 1.5em;
+  margin: 0.5em;
+  margin-bottom: 1.5em;
+  border-radius: 50%;
+  background-color: #71ABFF;
+  border: 1px solid #71ABFF;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+label {
+  position: absolute;
+  top: 67vh;
+  left: calc(100% - 180px);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  height: 50vw;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  transform: translateX(-100%);
+  transition-duration: .5s;
+} 
+
+
+input:checked ~ .slide {
+  transform: translateX(100%);
+}
+
+input:checked + label + .slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.memes-text {
+  position: absolute;
+  width: 40%;
+  z-index: 500;
+  top: 67vh;
+  color: #FFFFFF;
+  transform: translateX(-100%);
+  transition-duration: .6s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+input:checked ~ .memes-text {
+  transform: translateX(-100%);
+}
+
+input:checked + label + .slide + .memes-text {
+  transform: translateX(0);
+}
+
+
+input[type="radio"]:before {
+  border-radius: 50%;
+  background-color: #71ABFF;
+  border: 1px solid #71ABFF;
+
+}
+
+input[type="radio"]:after {
+  content: "";
+  padding: 30px 10px;
+}
+
+
+input[type="radio"]:focus {
+  background-color: #25282A;
+  border: 1px solid #71ABFF;
+}
+
+
+input[type="radio"]:checked {
+  background-color: #25282A;
+  border: 1px solid #71ABFF;
+} 
+
+
+input[type="radio"]:hover {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+} 
+
+
+@media only screen and (max-width:330px) {
+  
+  .common-container {
+    padding: 15px 20px 0 20px;
+  }
+
+  .slider-container {
+    position: relative;
+    z-index: 1;
+    width: calc(100vw - 40px);
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+  
+ input[type="radio"] {
+  position: relative;
+  top: 44vw;
+  left: 34%;
+  cursor: pointer;
+  margin-bottom: 8px;
+  z-index: 200;
+  height: 8px;
+  width: 8px;
+  margin: 2px;
+}
+
+input[type="radio"]:after {
+  /* background-color: #71ABFF;
+  border: 1px solid #71ABFF; */
+  content: " ";
+  padding: 10px;
+}
+
+label {
+  position: relative;
+  top: 25vh;
+  height: 40px;
+  width: 20px;
+  left: 34%;
+  content: "";
+  cursor: pointer;
+}
+
+.slide {
+  height: 85%;
+  width: 100%;
+  border-radius: 3px;
+} 
+
+.memes-text {
+  width: 100%;
+  top: 54vw;
+  font-size: 14px;
+}
+
+}
