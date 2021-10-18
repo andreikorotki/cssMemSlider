@@ -111,7 +111,7 @@ appearance: none;
 
 input[type="radio"] {
   position: relative;
-  top: 65vh;
+  top: 67vh;
   left: calc(100% - 180px);
   z-index: 200;
   height: 1.5em;
@@ -127,8 +127,8 @@ input[type="radio"] {
 
 label {
   position: absolute;
-  top: 65vh;
-  left: 105vh;
+  top: 67vh;
+  left: calc(100% - 180px);
 }
 
 .slide {
@@ -158,7 +158,7 @@ input:checked + label + .slide {
   position: absolute;
   width: 40%;
   z-index: 500;
-  bottom: 15vh;
+  top: 67vh;
   color: #FFFFFF;
   transform: translateX(-100%);
   transition-duration: .6s;
